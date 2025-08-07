@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { User } from "../models/usermodel.js";
 import bcrypt from "bcryptjs";
+import mongoose from "mongoose";
 
 interface JwtPayload {
   _id: string;
@@ -38,7 +39,7 @@ export const profileController = async (req: Request, res: Response) => {
     }
 
     const response: ProfileResponse = {
-      _id: user._id,
+       _id: user._id.toString(),
       firstName: user.firstName,
       lastName: user.lastName,
       email: user.email,
@@ -96,10 +97,11 @@ export const profileUpdate = async (req: Request, res: Response) => {
     
     // Return updated user data
     const response: ProfileResponse = {
-      _id: user._id,
+       _id: user._id.toString(),
       firstName: user.firstName,
       lastName: user.lastName,
-      email: user.email
+      email: user.email,
+      role:user.role
     };
 
     res.json(response);

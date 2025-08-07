@@ -7,8 +7,8 @@ import  {profileController}  from '../controllers/profilecontroller.js';
 import { profileUpdate } from '../controllers/profilecontroller.js';
 import { Request,Response } from 'express';
 import { NextFunction } from 'express';
-import { User } from 'src/models/usermodel.js';
-import { protect } from 'src/middleware/protect.js';
+import { User } from '../models/usermodel.js';
+import { protect } from '../middleware/protect.js';
 import dotenv from 'dotenv';
 dotenv.config()
 

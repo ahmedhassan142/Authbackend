@@ -10,10 +10,10 @@
     // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
     // "disableReferencedProjectLoad": true, 
        "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./build",
     "baseUrl": ".",
     "paths": {
-      "@routes/*": ["src/routes/*"]
+      "@/*": ["src*"]
     },    
   
     "moduleResolution": "node",                 /* Reduce the number of projects loaded automatically by TypeScript. */
